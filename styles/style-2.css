@@ -1,0 +1,88 @@
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    
+        .shapes-container {
+            display: flex;
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 50px;
+        }
+     
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #ff5959; 
+        }
+       
+        .rectangle {
+            width: 140px;
+            height: 80px;
+            background-color: #7373ff; 
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #50ffff; 
+            border-radius: 50%;
+        }
+
+        .parallelogram {
+            width: 140px;
+            height: 80px;
+            background-color: #ff8eff; 
+            transform: skew(20deg);
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #ccff99; 
+        }
+
+        .interactive-box {
+            position: relative; 
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            z-index: 1;
+            margin-left: 190px;
+        }
+
+        .hidden-circle {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: rgb(0, 0, 0); 
+            border-radius: 50%;
+            z-index: -1; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+    
+        }
+
+        .interactive-box:hover {
+            background-color: transparent; 
+        }
+
+        .interactive-box:hover .hidden-circle {
+            opacity: 1; 
+            z-index: -1; 
+        }
+       
+        .interactive-box span {
+            z-index: 2;
+        }

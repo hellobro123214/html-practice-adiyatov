@@ -1,0 +1,108 @@
+
+
+#field {
+    width: 500px;
+    height: 400px;
+
+    background: lightblue;
+    border: 3px solid black;
+
+    position: relative;
+
+    margin: 100px auto;
+
+    overflow: hidden;
+}
+
+
+#small_sh {
+    width: 120px;
+    height: 120px;
+
+    position: absolute;
+
+    left: 80px;
+    bottom: 40px;
+
+    z-index: 2;
+}
+
+
+
+#big_sh {
+    width: 160px;
+    height: 160px;
+
+    position: absolute;
+
+    left: 190px;
+    bottom: 40px;
+
+    z-index: 1;
+}
+
+
+#text {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+
+    color: lightblue;
+
+    z-index: 0;
+}
+
+
+@keyframes rotateAnimation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+#field:hover {
+
+    background: transparent;
+
+    transition: background 3s;
+
+    cursor: pointer;
+}
+
+
+#field:hover #small_sh {
+
+    width: 140px;
+    height: 140px;
+
+    animation: rotateAnimation 1s linear infinite;
+
+    transition: 1s;
+}
+
+#field:hover #big_sh {
+
+    width: 180px;
+    height: 180px;
+
+    animation: rotateAnimation 1s linear infinite;
+
+    transition: 1s;
+}
+
+#field:hover #text {
+
+    color: black;
+
+    transition: color 3s;
+}

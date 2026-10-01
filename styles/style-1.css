@@ -1,1 +1,20 @@
+body {
+    background-color: lightgreen;
+}
 
+h1 {
+    text-align: center;
+}
+
+p {
+    position: absolute;
+    left: 35%;
+    top: 150px;
+    font-size: 20px;
+}
+
+img {
+    position: absolute;
+    left: 55%;
+    top: 180px;
+    border: solid 5px;
